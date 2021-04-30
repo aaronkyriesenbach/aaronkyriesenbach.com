@@ -1,0 +1,25 @@
+.navbar {
+    background: #282a36;
+    border-color: #6272a4;
+    border-width: 0 5px 5px 0;
+    border-style: solid;
+    height: 4rem;
+    width: fit-content;
+    border-radius: 0 0 20px 0;
+    padding-right: 0.5rem;
+
+    display: flex;
+    flex-direction: row;
+
+    font-size: 2em;
+}
+
+.nav {
+    height: 100%;
+    padding: 0.4rem 0.5rem;
+    color: #6272a4;
+
+    &:hover {
+        color: #bd93f9;
+    }
+}
