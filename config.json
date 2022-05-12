@@ -1,5 +1,4 @@
 {
-  "readmeUrl": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com/blob/master/README.md",
   "title": "Aaron Ky-Riesenbach",
   "name": "Aaron Ky-Riesenbach",
   "social": {
@@ -11,6 +10,10 @@
   "ps1_username": "visitor",
   "repo": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com",
   "resume_url": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com/blob/master/resume.pdf",
+  "books": {
+    "last": "Mr. Penumbra's 24-Hour Bookstore - Robin Sloan",
+    "current": "Zen and the Art of Motorcycle Maintenance - Robert M. Pirsig"
+  },
   "colors": {
     "light": {
       "background": "#FFFFDB",
