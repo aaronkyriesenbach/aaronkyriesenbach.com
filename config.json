@@ -1,16 +1,16 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
+  "readmeUrl": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com/blob/master/README.md",
   "title": "Aaron Ky-Riesenbach",
   "name": "Aaron Ky-Riesenbach",
   "social": {
-    "github": "https://github.com/aaronkyriesenbach",
-    "linkedin": "https://www.linkedin.com/in/aaron-ky-riesenbach-b981441b3/"
+    "github": "aaronkyriesenbach",
+    "linkedin": "aaron-ky-riesenbach-b981441b3"
   },
   "email": "aaronkyriesenbach@pobox.com",
   "ps1_hostname": "aaronkyriesenbach.com",
   "ps1_username": "visitor",
   "repo": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "resume_url": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com/blob/master/resume.pdf",
   "colors": {
     "light": {
       "background": "#FFFFDB",
