@@ -1,16 +1,15 @@
 {
   "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "title": "Aaron Ky-Riesenbach",
+  "name": "Aaron Ky-Riesenbach",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "https://github.com/aaronkyriesenbach",
+    "linkedin": "https://www.linkedin.com/in/aaron-ky-riesenbach-b981441b3/"
   },
   "email": "aaronkyriesenbach@pobox.com",
   "ps1_hostname": "aaronkyriesenbach.com",
   "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
+  "repo": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com",
   "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
   "colors": {
     "light": {
