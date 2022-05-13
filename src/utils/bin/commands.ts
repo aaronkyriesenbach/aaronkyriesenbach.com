@@ -1,21 +1,15 @@
-// List of commands that do not require API calls
-
 import * as bin from './index';
 import config from '../../../config.json';
 
 // Help
-export const help = async (args: string[]): Promise<string> => {
-  const commands = Object.keys(bin).sort().join(', ');
-  var c = '';
-  for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
-    if (i % 7 === 0) {
-      c += Object.keys(bin).sort()[i - 1] + '\n';
-    } else {
-      c += Object.keys(bin).sort()[i - 1] + ' ';
-    }
+export const help = (): string => {
+  const commands = Object.keys(bin).sort();
+  var commandString = '';
+  for (let i = 1; i <= commands.length; i++) {
+    commandString += commands[i - 1] + (i % 7 === 0 ? '\n' : ' ');
   }
   return `Welcome! Here are all the available commands:
-\n${c}\n
+\n${commandString}\n
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
 Type 'sumfetch' to display summary.
@@ -23,13 +17,14 @@ Type 'sumfetch' to display summary.
 };
 
 // Redirection
-export const repo = async (args: string[]): Promise<string> => {
+export const repo = (): string => {
   window.open(`${config.repo}`);
+
   return 'Opening Github repository...';
 };
 
 // About
-export const about = async (args: string[]): Promise<string> => {
+export const about = (): string => {
   return `Hey, I'm ${config.name.split(' ')[0]}! I'm a student at Northeastern University studying Computer Engineering and Music Technology.
 I'm a coxswain on the varsity rowing team, and in my free time I enjoy playing the violin, reading (try running 'books'!), listening to music,
 brewing coffee, and playing chess.
@@ -37,70 +32,72 @@ brewing coffee, and playing chess.
 (run 'help' to see all commands)`;
 };
 
-export const resume = async (args: string[]): Promise<string> => {
+export const resume = (): string => {
   window.open(`${config.resume_url}`);
+
   return 'Opening resume...';
 };
 
-export const books = async (args: string[]): Promise<string> => {
+export const books = (): string => {
   return `Last read: ${config.books.last}
 Currently reading: ${config.books.current}`;
 };
 
 // Contact
-export const email = async (args: string[]): Promise<string> => {
+export const email = (): string => {
   window.open(`mailto:${config.email}`);
+
   return `Opening mailto:${config.email}...`;
 };
 
-export const github = async (args: string[]): Promise<string> => {
+export const github = (): string => {
   window.open(`https://github.com/${config.social.github}/`);
 
-  return 'Opening github...';
+  return 'Opening GitHub...';
 };
 
-export const linkedin = async (args: string[]): Promise<string> => {
+export const linkedin = (): string => {
   window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
-  return 'Opening linkedin...';
+  return 'Opening LinkedIn...';
 };
 
 // Typical linux commands
-export const echo = async (args: string[]): Promise<string> => {
+export const echo = (args: string[]): string => {
   return args.join(' ');
 };
 
-export const whoami = async (args: string[]): Promise<string> => {
+export const whoami = (): string => {
   return `${config.ps1_username}`;
 };
 
-export const date = async (args: string[]): Promise<string> => {
+export const date = (): string => {
   return new Date().toString();
 };
 
-export const vi = async (args: string[]): Promise<string> => {
+export const vi = (): string => {
   return `woah, you still use 'vi'? just try 'vim'.`;
 };
 
-export const vim = async (args: string[]): Promise<string> => {
+export const vim = (): string => {
   return `'vim' is so outdated. how about 'nvim'?`;
 };
 
-export const nvim = async (args: string[]): Promise<string> => {
+export const nvim = (): string => {
   return `'nvim'? too fancy. why not 'emacs'?`;
 };
 
-export const emacs = async (args?: string[]): Promise<string> => {
+export const emacs = (): string => {
   return `you know what? just use vscode.`;
 };
 
-export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
+export const sudo = (): string => {
+  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
   return `Permission denied: with little power comes... no responsibility? `;
 };
 
 // Banner
-export const banner = (args?: string[]): string => {
+export const banner = (): string => {
   return `
   █████╗  █████╗ ██████╗  ██████╗ ███╗   ██╗    ██╗  ██╗██╗   ██╗     ██████╗ ██╗███████╗███████╗███████╗███╗   ██╗██████╗  █████╗  ██████╗██╗  ██╗
   ██╔══██╗██╔══██╗██╔══██╗██╔═══██╗████╗  ██║    ██║ ██╔╝╚██╗ ██╔╝     ██╔══██╗██║██╔════╝██╔════╝██╔════╝████╗  ██║██╔══██╗██╔══██╗██╔════╝██║  ██║
@@ -115,8 +112,8 @@ Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline"
 `;
 };
 
-export const summary = async (args: string[]): Promise<string> => {
-    return `
+export const summary = (): string => {
+  return `
            ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                  summary
         ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
       ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄             ABOUT (run 'about' for more!)
