@@ -1,11 +1,11 @@
 {
-  "name": "liveterm",
-  "version": "0.1.0",
+  "name": "aaronkyriesenbach.com",
+  "version": "1.0.0",
   "license": "MIT",
   "author": {
-    "name": "Vincent Wu",
-    "url": "https://cveinnt.com",
-    "email": "contact@wensenwu.com"
+    "name": "Aaron Ky-Riesenbach",
+    "url": "https://aaronkyriesenbach.com",
+    "email": "aaronkyriesenbach@pobox.com"
   },
   "scripts": {
     "dev": "next dev",
