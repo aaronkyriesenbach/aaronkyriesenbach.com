@@ -1,11 +1,8 @@
 {
-  "name": "LiveTerm",
-  "short_name": "LiveTerm",
-  "theme_color": "#2E3440",
-  "background_color": "#2E3440",
+  "name": "Aaron Ky-Riesenbach",
+  "background_color": "#282a36",
   "display": "fullscreen",
   "orientation": "portrait",
-  "scope": "/",
   "start_url": "/",
   "icons": [
     {
@@ -18,6 +15,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "splash_pages": null
+  ]
 }
