@@ -1,9 +1,13 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import config from '../../config.json';
 
-export const getProjects = async () => {
-  const { data } = await axios.get(
+type Repo = {
+  name: string,
+  html_url: string
+}
+
+export const getProjects = (): Promise<AxiosResponse<Array<Repo>>> => {
+  return axios.get(
     `https://api.github.com/users/${config.social.github}/repos`,
   );
-  return data;
 };
