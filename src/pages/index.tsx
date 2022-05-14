@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import config from '../../config.json';
-import { Input } from '../components/input';
+import { Input } from '../components/input/Input';
 import { useHistory } from '../components/history/hook';
 import { History } from '../components/history/History';
 import { banner } from '../utils/bin';
@@ -11,7 +11,7 @@ interface IndexPageProps {
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
-  const containerRef = React.useRef(null);
+  const containerRef = React.useRef<HTMLDivElement>(null);
   const {
     history,
     command,
