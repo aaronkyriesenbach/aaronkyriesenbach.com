@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect } from 'react';
 import config from '../../config.json';
 import { History } from '../components/history/History';
 import { useHistory } from '../components/history/hook';
 import { Input } from '../components/input/Input';
-import { BANNER_STRING } from '../utils/bin/banner';
+import { shell } from '../utils/shell';
 
 interface IndexPageProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
@@ -21,13 +21,9 @@ const IndexPage = ({ inputRef }: IndexPageProps) => {
     setLastCommandIndex,
   } = useHistory([]);
 
-  const init = React.useCallback(() => setHistory(BANNER_STRING), []);
+  useEffect(() => { shell('banner', setHistory, clearHistory, setCommand) }, []);
 
-  React.useEffect(() => {
-    init();
-  }, [init]);
-
-  React.useEffect(() => {
+  useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
     }

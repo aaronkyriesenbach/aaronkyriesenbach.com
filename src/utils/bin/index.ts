@@ -1,5 +1,5 @@
 export * from './about';
-export { banner } from './banner';
+export * from './banner';
 export * from './books';
 export * from './date';
 export * from './echo';
