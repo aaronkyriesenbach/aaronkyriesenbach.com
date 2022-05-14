@@ -1,3 +1,20 @@
-export * from './commands';
-export * from './api_commands';
-export { banner } from './banner'
+export * from './about';
+export { banner } from './banner';
+export * from './books';
+export * from './date';
+export * from './echo';
+export * from './emacs';
+export * from './email';
+export * from './github';
+export * from './help';
+export * from './linkedin';
+export * from './nvim';
+export * from './projects';
+export * from './repo';
+export * from './resume';
+export * from './sudo';
+export * from './summary';
+export * from './vi';
+export * from './vim';
+export * from './whoami';
+
