@@ -1,5 +1,5 @@
 import { MutableRefObject } from 'react';
-import { Entry } from '../history/Entry'
+import { Entry } from '../history/Entry';
 
 export type InputProps = {
     inputRef: MutableRefObject<HTMLInputElement>,

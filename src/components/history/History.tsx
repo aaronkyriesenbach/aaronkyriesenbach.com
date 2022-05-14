@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Ps1 } from '../Ps1';
 import { Entry } from './Entry';
 
@@ -8,7 +8,7 @@ type HistoryProps = {
 
 export const History = (props: HistoryProps) => {
   const { history } = props;
-  
+
   const containerEndRef = React.useRef<HTMLDivElement>(null);
 
   useEffect(() => containerEndRef.current.scrollIntoView(), [history]);
