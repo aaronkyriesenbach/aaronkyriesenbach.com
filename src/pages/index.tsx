@@ -11,7 +11,6 @@ interface IndexPageProps {
 }
 
 const IndexPage = ({ inputRef }: IndexPageProps) => {
-  const containerEndRef = React.useRef<HTMLDivElement>(null);
   const {
     history,
     command,
@@ -42,11 +41,10 @@ const IndexPage = ({ inputRef }: IndexPageProps) => {
 
       <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
         <div className="overflow-y-auto h-full">
-          <History history={history} containerEndRef={containerEndRef} />
+          <History history={history} />
 
           <Input
             inputRef={inputRef}
-            containerEndRef={containerEndRef}
             command={command}
             history={history}
             lastCommandIndex={lastCommandIndex}

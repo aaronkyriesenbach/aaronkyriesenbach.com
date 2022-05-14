@@ -9,10 +9,9 @@ export const help = (): Promise<string> => {
     commandString += commands[i - 1] + (i % 7 === 0 ? '\n' : ' ');
   }
   return Promise.resolve(`Welcome! Here are all the available commands:
-\n${commandString}\n
-[tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.`);
+\n${commandString}
+
+Type 'summary' to display summary.`);
 };
 
 // Redirection

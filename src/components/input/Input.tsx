@@ -7,7 +7,6 @@ import { InputProps } from './InputProps';
 
 export const Input = ({
   inputRef,
-  containerEndRef,
   command,
   history,
   lastCommandIndex,
@@ -41,10 +40,7 @@ export const Input = ({
     if (event.key === 'Enter' || event.code === '13') {
       event.preventDefault();
       setLastCommandIndex(0);
-      shell(command, setHistory, clearHistory, setCommand).then(() => {
-        // console.log(containerEndRef.current);
-        containerEndRef.current.scrollIntoView();
-      });
+      shell(command, setHistory, clearHistory, setCommand);
     }
 
     if (event.key === 'ArrowUp') {
