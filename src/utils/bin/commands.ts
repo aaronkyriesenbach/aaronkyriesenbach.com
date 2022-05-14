@@ -95,22 +95,6 @@ export const sudo = (): Promise<string> => {
   return Promise.resolve(`Permission denied: with little power comes... no responsibility? `);
 };
 
-// Banner
-export const banner = (): Promise<string> => {
-  return Promise.resolve(`
-  █████╗  █████╗ ██████╗  ██████╗ ███╗   ██╗    ██╗  ██╗██╗   ██╗     ██████╗ ██╗███████╗███████╗███████╗███╗   ██╗██████╗  █████╗  ██████╗██╗  ██╗
-  ██╔══██╗██╔══██╗██╔══██╗██╔═══██╗████╗  ██║    ██║ ██╔╝╚██╗ ██╔╝     ██╔══██╗██║██╔════╝██╔════╝██╔════╝████╗  ██║██╔══██╗██╔══██╗██╔════╝██║  ██║
-  ███████║███████║██████╔╝██║   ██║██╔██╗ ██║    █████╔╝  ╚████╔╝█████╗██████╔╝██║█████╗  ███████╗█████╗  ██╔██╗ ██║██████╔╝███████║██║     ███████║
-  ██╔══██║██╔══██║██╔══██╗██║   ██║██║╚██╗██║    ██╔═██╗   ╚██╔╝ ╚════╝██╔══██╗██║██╔══╝  ╚════██║██╔══╝  ██║╚██╗██║██╔══██╗██╔══██║██║     ██╔══██║
-  ██║  ██║██║  ██║██║  ██║╚██████╔╝██║ ╚████║    ██║  ██╗   ██║        ██║  ██║██║███████╗███████║███████╗██║ ╚████║██████╔╝██║  ██║╚██████╗██║  ██║
-  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═╝  ╚═╝   ╚═╝        ╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝  
-
-Type 'help' to see the list of available commands.
-Type 'summary' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
-`);
-};
-
 export const summary = (): Promise<string> => {
   return Promise.resolve(`
            ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                  summary
