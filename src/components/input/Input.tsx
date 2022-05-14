@@ -9,7 +9,7 @@ import { InputProps } from './InputProps';
 export const Input = (props: InputProps) => {
   const { inputRef, command, history, lastCommandIndex, setCommand, setHistory, setLastCommandIndex, clearHistory } = props;
 
-  const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const onSubmit = (event: React.KeyboardEvent<HTMLInputElement>) => {
     const commands: string[] = history.map((entry: Entry) => entry.command);
 
     if (event.key === 'c' && event.ctrlKey) {
