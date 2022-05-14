@@ -2,23 +2,15 @@ import React from 'react';
 import { commandExists } from '../../utils/commandExists';
 import { shell } from '../../utils/shell';
 import { handleTabCompletion } from '../../utils/tabCompletion';
+import { Entry } from '../history/Entry';
 import { Ps1 } from '../Ps1';
 import { InputProps } from './InputProps';
 
-export const Input = ({
-  inputRef,
-  command,
-  history,
-  lastCommandIndex,
-  setCommand,
-  setHistory,
-  setLastCommandIndex,
-  clearHistory,
-}: InputProps) => {
+export const Input = (props: InputProps) => {
+  const { inputRef, command, history, lastCommandIndex, setCommand, setHistory, setLastCommandIndex, clearHistory } = props;
+
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    const commands: string[] = history
-      .map(({ command }) => command)
-      .filter((command: string) => command);
+    const commands: string[] = history.map((entry: Entry) => entry.command);
 
     if (event.key === 'c' && event.ctrlKey) {
       event.preventDefault();

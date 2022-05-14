@@ -1,4 +1,4 @@
-export interface Entry {
+export type Entry = {
   id: number;
   date: Date;
   command: string;
