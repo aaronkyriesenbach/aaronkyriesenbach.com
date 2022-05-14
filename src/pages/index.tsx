@@ -42,7 +42,7 @@ const IndexPage = ({ inputRef }: IndexPageProps) => {
 
       <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
         <div className="overflow-y-auto h-full">
-          <History history={history} />
+          <History history={history} containerEndRef={containerEndRef} />
 
           <Input
             inputRef={inputRef}
@@ -55,8 +55,6 @@ const IndexPage = ({ inputRef }: IndexPageProps) => {
             setLastCommandIndex={setLastCommandIndex}
             clearHistory={clearHistory}
           />
-          
-          <div ref={containerEndRef}/>
         </div>
       </div>
     </>

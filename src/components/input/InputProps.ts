@@ -1,11 +1,11 @@
 import { MutableRefObject } from 'react';
-import { History } from '../history/interface'
+import { Entry } from '../history/Entry'
 
 export type InputProps = {
     inputRef: MutableRefObject<HTMLInputElement>,
     containerEndRef: MutableRefObject<HTMLDivElement>,
     command: string,
-    history: History[],
+    history: Entry[],
     lastCommandIndex: number,
     setCommand: React.Dispatch<React.SetStateAction<string>>,
     setHistory: (value: string) => void,

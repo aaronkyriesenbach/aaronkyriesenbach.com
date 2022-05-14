@@ -1,13 +1,18 @@
-import React from 'react';
-import { History as HistoryInterface } from './interface';
+import React, { MutableRefObject } from 'react';
 import { Ps1 } from '../Ps1';
+import { Entry } from './Entry';
 
-export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
-  history,
-}) => {
+type HistoryProps = {
+  history: Entry[],
+  containerEndRef: MutableRefObject<HTMLDivElement>
+}
+
+export const History = (props: HistoryProps) => {
+  const { history, containerEndRef } = props;
+
   return (
-    <>
-      {history.map((entry: HistoryInterface, index: number) => (
+    <div>
+      {history.map((entry: Entry, index: number) => (
         <div key={entry.command + index}>
           <div className="flex flex-row space-x-2">
             <div className="flex-shrink">
@@ -24,7 +29,9 @@ export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
           />
         </div>
       ))}
-    </>
+
+      <div ref={containerEndRef} />
+    </div>
   );
 };
 

@@ -41,7 +41,10 @@ export const Input = ({
     if (event.key === 'Enter' || event.code === '13') {
       event.preventDefault();
       setLastCommandIndex(0);
-      shell(command, setHistory, clearHistory, setCommand).then(() => containerEndRef.current.scrollIntoView());
+      shell(command, setHistory, clearHistory, setCommand).then(() => {
+        // console.log(containerEndRef.current);
+        containerEndRef.current.scrollIntoView();
+      });
     }
 
     if (event.key === 'ArrowUp') {
@@ -79,7 +82,7 @@ export const Input = ({
   };
 
   return (
-    <div className="flex flex-row space-x-2" ref={containerEndRef}>
+    <div className="flex flex-row space-x-2">
       <label htmlFor="prompt" className="flex-shrink">
         <Ps1 />
       </label>

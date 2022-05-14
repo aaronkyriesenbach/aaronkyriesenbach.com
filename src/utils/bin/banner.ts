@@ -13,6 +13,6 @@ Type 'summary' to display summary.
 Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
 `
 
-export default function banner(): Promise<string> {
-    return Promise.resolve(BANNER_STRING);
-  };
+export function banner(): Promise<string> {
+  return Promise.resolve(BANNER_STRING);
+};
