@@ -3,7 +3,7 @@ import { commandExists } from '../../utils/commandExists';
 import { shell } from '../../utils/shell';
 import { handleTabCompletion } from '../../utils/tabCompletion';
 import { Entry } from '../history/Entry';
-import { Ps1 } from '../Ps1';
+import Prompt from '../Prompt';
 import { InputProps } from './InputProps';
 
 export const Input = (props: InputProps) => {
@@ -72,7 +72,7 @@ export const Input = (props: InputProps) => {
   return (
     <div className="flex flex-row space-x-2">
       <label htmlFor="prompt" className="flex-shrink">
-        <Ps1 />
+        <Prompt />
       </label>
 
       <input

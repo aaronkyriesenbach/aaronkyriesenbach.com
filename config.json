@@ -6,8 +6,10 @@
     "linkedin": "aaron-ky-riesenbach-b981441b3"
   },
   "email": "aaronkyriesenbach@pobox.com",
-  "ps1_hostname": "aaronkyriesenbach.com",
-  "ps1_username": "visitor",
+  "prompt": {
+    "username": "visitor",
+    "hostname": "aaronkyriesenbach.com"
+  },
   "repo": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com",
   "resume_url": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com/blob/master/resume.pdf",
   "books": {
