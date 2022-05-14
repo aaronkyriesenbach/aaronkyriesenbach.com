@@ -7,7 +7,7 @@ import { InputProps } from './InputProps';
 
 export const Input = ({
   inputRef,
-  containerRef,
+  containerEndRef,
   command,
   history,
   lastCommandIndex,
@@ -41,8 +41,7 @@ export const Input = ({
     if (event.key === 'Enter' || event.code === '13') {
       event.preventDefault();
       setLastCommandIndex(0);
-      await shell(command, setHistory, clearHistory, setCommand);
-      containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+      shell(command, setHistory, clearHistory, setCommand).then(() => containerEndRef.current.scrollIntoView());
     }
 
     if (event.key === 'ArrowUp') {
@@ -80,7 +79,7 @@ export const Input = ({
   };
 
   return (
-    <div className="flex flex-row space-x-2" ref={containerRef}>
+    <div className="flex flex-row space-x-2" ref={containerEndRef}>
       <label htmlFor="prompt" className="flex-shrink">
         <Ps1 />
       </label>

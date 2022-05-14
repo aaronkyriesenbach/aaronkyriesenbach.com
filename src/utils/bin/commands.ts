@@ -1,104 +1,103 @@
-import * as bin from './index';
 import config from '../../../config.json';
+import * as bin from './index';
 
 // Help
-export const help = (): string => {
+export const help = (): Promise<string> => {
   const commands = Object.keys(bin).sort();
   var commandString = '';
   for (let i = 1; i <= commands.length; i++) {
     commandString += commands[i - 1] + (i % 7 === 0 ? '\n' : ' ');
   }
-  return `Welcome! Here are all the available commands:
+  return Promise.resolve(`Welcome! Here are all the available commands:
 \n${commandString}\n
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
-`;
+Type 'sumfetch' to display summary.`);
 };
 
 // Redirection
-export const repo = (): string => {
+export const repo = (): Promise<string> => {
   window.open(`${config.repo}`);
 
-  return 'Opening Github repository...';
+  return Promise.resolve('Opening Github repository...');
 };
 
 // About
-export const about = (): string => {
-  return `Hey, I'm ${config.name.split(' ')[0]}! I'm a student at Northeastern University studying Computer Engineering and Music Technology.
+export const about = (): Promise<string> => {
+  return Promise.resolve(`Hey, I'm ${config.name.split(' ')[0]}! I'm a student at Northeastern University studying Computer Engineering and Music Technology.
 I'm a coxswain on the varsity rowing team, and in my free time I enjoy playing the violin, reading (try running 'books'!), listening to music,
 brewing coffee, and playing chess.
 
-(run 'help' to see all commands)`;
+(run 'help' to see all commands)`);
 };
 
-export const resume = (): string => {
+export const resume = (): Promise<string> => {
   window.open(`${config.resume_url}`);
 
-  return 'Opening resume...';
+  return Promise.resolve('Opening resume...');
 };
 
-export const books = (): string => {
-  return `Last read: ${config.books.last}
-Currently reading: ${config.books.current}`;
+export const books = (): Promise<string> => {
+  return Promise.resolve(`Last read: ${config.books.last}
+Currently reading: ${config.books.current}`);
 };
 
 // Contact
-export const email = (): string => {
+export const email = (): Promise<string> => {
   window.open(`mailto:${config.email}`);
 
-  return `Opening mailto:${config.email}...`;
+  return Promise.resolve(`Opening mailto:${config.email}...`);
 };
 
-export const github = (): string => {
+export const github = (): Promise<string> => {
   window.open(`https://github.com/${config.social.github}/`);
 
-  return 'Opening GitHub...';
+  return Promise.resolve('Opening GitHub...');
 };
 
-export const linkedin = (): string => {
+export const linkedin = (): Promise<string> => {
   window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
-  return 'Opening LinkedIn...';
+  return Promise.resolve('Opening LinkedIn...');
 };
 
 // Typical linux commands
-export const echo = (args: string[]): string => {
-  return args.join(' ');
+export const echo = (args: string[]): Promise<string> => {
+  return Promise.resolve(args.join(' '));
 };
 
-export const whoami = (): string => {
-  return `${config.ps1_username}`;
+export const whoami = (): Promise<string> => {
+  return Promise.resolve(`${config.ps1_username}`);
 };
 
-export const date = (): string => {
-  return new Date().toString();
+export const date = (): Promise<string> => {
+  return Promise.resolve(new Date().toString());
 };
 
-export const vi = (): string => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
+export const vi = (): Promise<string> => {
+  return Promise.resolve(`Woah, you still use vi? At least use vim, geez.`);
 };
 
-export const vim = (): string => {
-  return `'vim' is so outdated. how about 'nvim'?`;
+export const vim = (): Promise<string> => {
+  return Promise.resolve(`Vim is so outdated. Nvim is the future!`);
 };
 
-export const nvim = (): string => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
+export const nvim = (): Promise<string> => {
+  return Promise.resolve(`Nvim is too fancy. Why not use emacs?`);
 };
 
-export const emacs = (): string => {
-  return `you know what? just use vscode.`;
+export const emacs = (): Promise<string> => {
+  return Promise.resolve(`This seems pretty complicated...maybe you should try vi?`);
 };
 
-export const sudo = (): string => {
+export const sudo = (): Promise<string> => {
   window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
-  return `Permission denied: with little power comes... no responsibility? `;
+  return Promise.resolve(`Permission denied: with little power comes... no responsibility? `);
 };
 
 // Banner
-export const banner = (): string => {
-  return `
+export const banner = (): Promise<string> => {
+  return Promise.resolve(`
   █████╗  █████╗ ██████╗  ██████╗ ███╗   ██╗    ██╗  ██╗██╗   ██╗     ██████╗ ██╗███████╗███████╗███████╗███╗   ██╗██████╗  █████╗  ██████╗██╗  ██╗
   ██╔══██╗██╔══██╗██╔══██╗██╔═══██╗████╗  ██║    ██║ ██╔╝╚██╗ ██╔╝     ██╔══██╗██║██╔════╝██╔════╝██╔════╝████╗  ██║██╔══██╗██╔══██╗██╔════╝██║  ██║
   ███████║███████║██████╔╝██║   ██║██╔██╗ ██║    █████╔╝  ╚████╔╝█████╗██████╔╝██║█████╗  ███████╗█████╗  ██╔██╗ ██║██████╔╝███████║██║     ███████║
@@ -109,11 +108,11 @@ export const banner = (): string => {
 Type 'help' to see the list of available commands.
 Type 'summary' to display summary.
 Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
-`;
+`);
 };
 
-export const summary = (): string => {
-  return `
+export const summary = (): Promise<string> => {
+  return Promise.resolve(`
            ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                  summary
         ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
       ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄             ABOUT (run 'about' for more!)
@@ -130,5 +129,5 @@ export const summary = (): string => {
         ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀               
             ▀▓▓▓▓▓▓▓▓▓▓▓▀▀                  
 
-`;
+`);
 };

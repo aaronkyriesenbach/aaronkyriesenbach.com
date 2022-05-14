@@ -3,7 +3,7 @@ import { History } from '../history/interface'
 
 export type InputProps = {
     inputRef: MutableRefObject<HTMLInputElement>,
-    containerRef: MutableRefObject<HTMLDivElement>,
+    containerEndRef: MutableRefObject<HTMLDivElement>,
     command: string,
     history: History[],
     lastCommandIndex: number,
