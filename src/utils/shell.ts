@@ -1,12 +1,15 @@
-import React from 'react';
 import * as bin from './bin';
 
-export const shell = (
+type ShellProps = {
   command: string,
   setHistory: (value: string) => void,
   clearHistory: () => void,
-  setCommand: React.Dispatch<React.SetStateAction<string>>,
-): Promise<string> => {
+  setCommand: (value: string) => void
+}
+
+export const shell = (props: ShellProps): Promise<string> => {
+  const { command, setHistory, clearHistory, setCommand } = props;
+
   const args = command.split(' ');
   args[0] = args[0].toLowerCase();
   var result: Promise<string> = Promise.resolve(undefined);

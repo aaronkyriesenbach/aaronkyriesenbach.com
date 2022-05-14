@@ -6,22 +6,14 @@ import { useHistory } from '../components/history/hook';
 import { Input } from '../components/input/Input';
 import { shell } from '../utils/shell';
 
-interface IndexPageProps {
+type IndexPageProps = {
   inputRef: React.MutableRefObject<HTMLInputElement>;
 }
 
 const IndexPage = ({ inputRef }: IndexPageProps) => {
-  const {
-    history,
-    command,
-    lastCommandIndex,
-    setCommand,
-    setHistory,
-    clearHistory,
-    setLastCommandIndex,
-  } = useHistory([]);
+  const { history, command, lastCommandIndex, setCommand, setHistory, clearHistory, setLastCommandIndex, } = useHistory([]);
 
-  useEffect(() => { shell('banner', setHistory, clearHistory, setCommand) }, []);
+  useEffect(() => { shell({ command: 'banner', setHistory, clearHistory, setCommand }) }, []);
 
   useEffect(() => {
     if (inputRef.current) {

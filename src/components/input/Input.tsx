@@ -32,7 +32,7 @@ export const Input = (props: InputProps) => {
     if (event.key === 'Enter' || event.code === '13') {
       event.preventDefault();
       setLastCommandIndex(0);
-      shell(command, setHistory, clearHistory, setCommand);
+      shell({ command, setHistory, clearHistory, setCommand });
     }
 
     if (event.key === 'ArrowUp') {
