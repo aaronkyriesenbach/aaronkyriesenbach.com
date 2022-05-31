@@ -11,7 +11,7 @@
     "hostname": "aaronkyriesenbach.com"
   },
   "repo": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com",
-  "resume_url": "https://github.com/aaronkyriesenbach/aaronkyriesenbach.com/blob/master/resume.pdf",
+  "resume_url": "/resume.pdf",
   "books": {
     "last": "Mr. Penumbra's 24-Hour Bookstore - Robin Sloan",
     "current": "Zen and the Art of Motorcycle Maintenance - Robert M. Pirsig"
