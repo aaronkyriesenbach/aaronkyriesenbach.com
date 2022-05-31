@@ -77,9 +77,9 @@ export const Input = (props: InputProps) => {
         ref={inputRef}
         id="prompt"
         type="text"
-        className={`bg-light-background dark:bg-dark-background focus:outline-none w-full ${commandExists(command) || command === ''
-          ? 'text-dark-green'
-          : 'text-dark-red'
+        className={`bg-light-background dark:bg-dark-background focus:outline-none w-full text-dark-${commandExists(command) || command === ''
+            ? 'green'
+            : 'red'
           }`}
         value={command}
         onChange={onChange}

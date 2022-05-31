@@ -6,8 +6,8 @@ export type InputProps = {
     command: string,
     history: Entry[],
     lastCommandIndex: number,
-    setCommand: React.Dispatch<React.SetStateAction<string>>,
+    setCommand: (value: string) => void,
     setHistory: (value: string) => void,
-    setLastCommandIndex: React.Dispatch<React.SetStateAction<number>>,
+    setLastCommandIndex: (value: number) => void,
     clearHistory: () => void
 }

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React, { useEffect } from 'react';
 import config from '../../config.json';
 import { History } from '../components/history/History';
-import { useHistory } from '../components/history/hook';
+import { useHistory } from '../components/history/useHistory';
 import { Input } from '../components/input/Input';
 import { shell } from '../utils/shell';
 
