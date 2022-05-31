@@ -1,7 +1,7 @@
 import config from '../../../config.json';
 
 export function banner(): Promise<string> {
-  const header: string = window.innerWidth <= 768 ?
+  const header: string = window.screen.width <= 768 ?
     'Welcome to my website! Please be aware that the full terminal experience works better on a computer, so you should check it out there!'
     :
     `
