@@ -20,10 +20,10 @@ const App = ({ Component, pageProps }) => {
       </Head>
 
       <div
-        className="text-light-foreground dark:text-dark-foreground text-xs"
+        className="text-light-foreground dark:text-dark-foreground text-xs md:text-base"
         onClick={onClickAnywhere}
       >
-        <main className="bg-light-background dark:bg-dark-background h-full">
+        <main className="bg-light-background dark:bg-dark-background h-full p-2">
           <Component {...pageProps} inputRef={inputRef} />
         </main>
       </div>
