@@ -22,7 +22,7 @@ Preview it locally anytime with `zola serve --drafts`.
 ## Local development
 
 ```sh
-docker run --rm -it -p 1111:1111 -v $(pwd):/app -w /app ghcr.io/getzola/zola:v0.19.2 serve --interface 0.0.0.0
+docker run --rm -it -p 1111:1111 -v $(pwd):/app -w /app ghcr.io/getzola/zola:v0.23.4 serve --interface 0.0.0.0
 ```
 
 ## Production build

@@ -1,14 +1,16 @@
-{% extends "base.html" %}
-{% block title %}{{ section.title }} — {{ config.title }}{% endblock title %}
-{% block content %}
+{% extends "base.html" %} {% block title %}{{ section.title }} — {{ config.title
+}}{% endblock title %} {% block content %}
 <h1>{{ section.title }}</h1>
 <div class="card-grid">
   {% for page in section.pages %}
   <a class="card" href="{{ page.permalink }}">
     <h2>{{ page.title }}</h2>
-    {% if page.extra.summary %}<p>{{ page.extra.summary }}</p>{% endif %}
+    {% if page.extra.summary %}
+    <p>{{ page.extra.summary }}</p>
+    {% endif %}
     <div class="tags">
-      {% for tag in page.taxonomies.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      {% for tag in page.taxonomies.tags %}<span class="tag">{{ tag }}</span>{%
+      endfor %}
     </div>
   </a>
   {% endfor %}

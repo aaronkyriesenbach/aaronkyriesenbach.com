@@ -45,9 +45,13 @@
   --border: #dcdcdc;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { color-scheme: dark light; }
+html {
+  color-scheme: dark light;
+}
 
 body {
   margin: 0;
@@ -61,8 +65,13 @@ body {
   min-height: 100vh;
 }
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 .site-header {
   display: flex;
@@ -73,9 +82,16 @@ a:hover { text-decoration: underline; }
   flex-wrap: wrap;
 }
 
-.site-header .prompt { color: var(--fg); font-weight: 500; }
+.site-header .prompt {
+  color: var(--fg);
+  font-weight: 500;
+}
 
-.site-header nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+.site-header nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
 #theme-toggle {
   margin-left: auto;
@@ -103,12 +119,23 @@ a:hover { text-decoration: underline; }
   text-align: center;
 }
 
-.site-footer .socials { display: flex; justify-content: center; gap: 1.5rem; }
+.site-footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
 
-.prose h1 { margin-top: 0; }
-.prose { color: var(--fg); }
+.prose h1 {
+  margin-top: 0;
+}
+.prose {
+  color: var(--fg);
+}
 
-.meta { color: var(--muted); font-size: 0.9rem; }
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
 .card-grid {
   display: grid;
@@ -124,11 +151,26 @@ a:hover { text-decoration: underline; }
   background: var(--bg-alt);
   color: var(--fg);
 }
-.card:hover { border-color: var(--accent); text-decoration: none; }
-.card h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
-.card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.card:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
-.tags { margin-top: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.tags {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
 .tag {
   font-size: 0.75rem;
   padding: 0.1rem 0.5rem;
@@ -137,7 +179,10 @@ a:hover { text-decoration: underline; }
   color: var(--muted);
 }
 
-.post-list { list-style: none; padding: 0; }
+.post-list {
+  list-style: none;
+  padding: 0;
+}
 .post-list li {
   display: flex;
   justify-content: space-between;
