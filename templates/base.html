@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ config.default_language }}" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <link rel="stylesheet" href="{{ get_url(path='css/main.css') }}">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header class="site-header">
+    <a class="prompt" href="{{ config.base_url }}/">aaron@kyriesenbach:~$</a>
+    <nav>
+      {% for item in config.extra.menu %}
+        <a href="{{ item.url }}">{{ item.name }}</a>
+      {% endfor %}
+      {% if config.extra.blog_enabled %}
+        <a href="/blog/">Blog</a>
+      {% endif %}
+    </nav>
+    <button id="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
+  </header>
+
+  <main class="site-main">
+    {% block content %}{% endblock content %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="socials">
+      {% for social in config.extra.socials %}
+        <a href="{{ social.url }}">{{ social.name }}</a>
+      {% endfor %}
+    </div>
+  </footer>
+
+  <script src="{{ get_url(path='js/theme-toggle.js') }}"></script>
+</body>
+</html>

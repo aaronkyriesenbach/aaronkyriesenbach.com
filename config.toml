@@ -1,0 +1,33 @@
+base_url = "https://aaronkyriesenbach.com"
+title = "Aaron Kyriesenbach"
+description = "Personal site of Aaron Kyriesenbach — software engineer and musician."
+default_language = "en"
+
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+
+taxonomies = [{ name = "tags", feed = false }]
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+smart_punctuation = true
+
+[extra]
+# Blog section stays out of the build via `draft = true` on content/blog/_index.md; flip both that and this to enable it.
+blog_enabled = false
+
+menu = [
+  { name = "Home", url = "/" },
+  { name = "Work", url = "/work/" },
+  { name = "Music", url = "/music/" },
+  { name = "Projects", url = "/projects/" },
+  { name = "Resume", url = "/resume/" },
+]
+
+socials = [
+  { name = "GitHub", url = "https://github.com/", icon = "github" },
+  { name = "LinkedIn", url = "https://www.linkedin.com/", icon = "linkedin" },
+  { name = "Email", url = "mailto:hello@aaronkyriesenbach.com", icon = "email" },
+]

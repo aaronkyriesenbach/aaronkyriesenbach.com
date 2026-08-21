@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} — {{ config.title }}{% endblock title %}
+{% block content %}
+<article class="prose">
+  <h1>{{ page.title }}</h1>
+  <p class="meta">{{ page.date | date(format="%B %-d, %Y") }}</p>
+  {{ page.content | safe }}
+  <p><a href="{{ get_url(path='projects') }}">&larr; back to projects</a></p>
+</article>
+{% endblock content %}
