@@ -209,11 +209,14 @@ blockquote {
   flex-wrap: wrap;
 }
 
+.header-left {
+  font-size: 1.5rem;
+}
+
 .site-header .prompt {
   color: var(--fg);
   font-family: "Space Grotesk", system-ui, sans-serif;
   font-weight: 600;
-  font-size: 1.15rem;
   border-bottom: none;
 }
 
