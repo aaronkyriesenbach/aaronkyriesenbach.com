@@ -27,6 +27,52 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Variable-LatinExt.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Variable-Italic-LatinExt.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Variable-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Variable-LatinExt.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Palette matches https://not-matthias.github.io/apollo/ (bg-0/bg-1/bg-2, text-0/text-1), swapping their red accent for blue. */
 :root[data-theme="dark"] {
   --bg: #121212;
@@ -60,12 +106,38 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+code {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+  font-size: 0.9em;
+}
+pre {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1em;
+  overflow-x: auto;
+}
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 a {
@@ -81,6 +153,16 @@ a:hover {
 ::selection {
   background: var(--accent);
   color: var(--hover-fg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 600;
 }
 
 h1::before,
@@ -132,7 +214,8 @@ blockquote {
 
 .site-header .prompt {
   color: var(--fg);
-  font-weight: 500;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 600;
   border-bottom: none;
 }
 
