@@ -103,28 +103,68 @@ blockquote {
   color: var(--muted);
 }
 
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .site-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1.5rem;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .site-header .prompt {
   color: var(--fg);
   font-weight: 500;
+  border-bottom: none;
 }
 
-.site-header nav {
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.social {
+  display: inline-flex;
+  border-bottom: none;
+  color: var(--fg);
+  opacity: 0.75;
+}
+.social:hover {
+  background: none;
+  color: var(--fg);
+  opacity: 1;
+}
+.social svg {
+  width: 16px;
+  height: 16px;
+}
+
+.header-right nav {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
 #theme-toggle {
-  margin-left: auto;
   background: none;
   border: 1px solid var(--border);
   color: var(--fg);
@@ -137,22 +177,7 @@ blockquote {
 
 .site-main {
   flex: 1;
-  max-width: 720px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem;
-}
-
-.site-footer {
-  border-top: 1px solid var(--border);
-  padding: 1rem 1.5rem;
-  text-align: center;
-}
-
-.site-footer .socials {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  padding: 2.5rem 0;
 }
 
 .prose h1 {
