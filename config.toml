@@ -18,12 +18,13 @@ theme = "dracula"
 [extra]
 # Blog section stays out of the build via `draft = true` on content/blog/_index.md; flip both that and this to enable it.
 blog_enabled = false
+# Same pattern as blog_enabled: also remove `draft = true` from content/projects/_index.md to re-enable.
+projects_enabled = false
 
 menu = [
   { name = "Home", url = "/" },
   { name = "Work", url = "/work/" },
   { name = "Music", url = "/music/" },
-  { name = "Projects", url = "/projects/" },
   { name = "Resume", url = "/resume/" },
 ]
 

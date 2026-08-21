@@ -5,19 +5,19 @@ Personal site, built with [Zola](https://www.getzola.org/).
 ## Structure
 
 - `content/work.md`, `content/music.md`, `content/resume.md` — standalone "about me" pages
-- `content/projects/` — tagged project pages (`computer` / `music`), rendered as a card grid
+- `content/projects/` — tagged project pages (`computer` / `music`), rendered as a card grid, kept out of the build for now (see below)
 - `content/blog/` — blog section, kept out of the build for now (see below)
 - `templates/`, `static/` — a small hand-rolled theme (JetBrains Mono, dark/light toggle)
 
-## Enabling the blog
+## Enabling the blog / projects
 
-The blog is fully built out but disabled by default:
+Both sections are fully built out but disabled by default, using the same two-step toggle:
 
-1. Remove `draft = true` from `content/blog/_index.md`
-2. Set `blog_enabled = true` in `config.toml`
+- **Blog:** remove `draft = true` from `content/blog/_index.md`, then set `blog_enabled = true` in `config.toml`
+- **Projects:** remove `draft = true` from `content/projects/_index.md`, then set `projects_enabled = true` in `config.toml`
 
-Until then, `zola build` skips the section entirely (no pages, no nav link).
-Preview it locally anytime with `zola serve --drafts`.
+Until then, `zola build` skips each section entirely (no pages, no nav link).
+Preview either locally anytime with `zola serve --drafts`.
 
 ## Local development
 
