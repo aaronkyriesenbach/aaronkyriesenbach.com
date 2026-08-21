@@ -27,22 +27,25 @@
   font-display: swap;
 }
 
+/* Palette matches https://not-matthias.github.io/apollo/ (bg-0/bg-1/bg-2, text-0/text-1), swapping their red accent for blue. */
 :root[data-theme="dark"] {
-  --bg: #1e1f29;
-  --bg-alt: #282a36;
-  --fg: #f8f8f2;
-  --muted: #6272a4;
-  --accent: #50fa7b;
-  --border: #44475a;
+  --bg: #121212;
+  --bg-alt: #1f1f1f;
+  --fg: #f0f0f0;
+  --muted: #ababab;
+  --accent: #1e90ff;
+  --border: #383838;
+  --hover-fg: #ffffff;
 }
 
 :root[data-theme="light"] {
-  --bg: #fafafa;
-  --bg-alt: #f0f0f0;
-  --fg: #222222;
-  --muted: #6b6b6b;
-  --accent: #007a3d;
-  --border: #dcdcdc;
+  --bg: #ffffff;
+  --bg-alt: #fafafa;
+  --fg: #212121;
+  --muted: #666666;
+  --accent: #1e90ff;
+  --border: #ededed;
+  --hover-fg: #ffffff;
 }
 
 * {
@@ -66,11 +69,38 @@ body {
 }
 
 a {
-  color: var(--accent);
+  color: inherit;
   text-decoration: none;
+  border-bottom: 2px solid var(--accent);
 }
 a:hover {
-  text-decoration: underline;
+  background: var(--accent);
+  color: var(--hover-fg);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--hover-fg);
+}
+
+h1::before,
+h2::before,
+h3::before {
+  color: var(--accent);
+  content: "# ";
+}
+h2::before {
+  content: "## ";
+}
+h3::before {
+  content: "### ";
+}
+
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 0;
+  padding-left: 1em;
+  color: var(--muted);
 }
 
 .site-header {
@@ -153,7 +183,8 @@ a:hover {
 }
 .card:hover {
   border-color: var(--accent);
-  text-decoration: none;
+  background: var(--bg-alt);
+  color: var(--fg);
 }
 .card h2 {
   margin: 0 0 0.5rem;
