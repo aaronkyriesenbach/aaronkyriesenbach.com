@@ -10,7 +10,7 @@ He has an interest in chamber music and most recently has performed with quartet
 His favorite pieces to play are the Sibelius Violin Concerto and the Ravel String Quartet.
 
 More recently, Aaron has developed a passion for bluegrass music, throwing himself headfirst into Boston's excellent bluegrass community.
-He studies guitar with Alex Rubin and has particular interest in progressive styles.
+He studies guitar with Alex Rubin and has particular interest in progressive styles, blending aspects of psychedelic rock and jam-band music with tradition.
 He plays regularly at community jams and can often be found pursuing new friends to play with.
 
-Aaron performs semi-regularly at events in the Boston area. Check back for more information.
+Aaron performs semi-regularly at events in the Boston area. Check back for more information!
