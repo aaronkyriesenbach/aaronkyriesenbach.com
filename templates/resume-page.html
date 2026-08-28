@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}{{ page.title }} — {{ config.title
+}}{% endblock title %} {% block content %}
+<article class="resume">
+  <div class="resume-header">
+    <h1>{{ page.title }}</h1>
+    <a class="button" href="{{ get_url(path='resume.pdf') }}" download>
+      Download PDF
+    </a>
+  </div>
+  <object
+    class="resume-embed"
+    data="{{ get_url(path='resume.pdf') }}#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+    type="application/pdf"
+  >
+    <p>
+      Your browser can't display the PDF inline.
+      <a href="{{ get_url(path='resume.pdf') }}">Download the resume</a>
+      instead.
+    </p>
+  </object>
+</article>
+{% endblock content %}
