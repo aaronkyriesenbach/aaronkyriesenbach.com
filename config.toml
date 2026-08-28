@@ -29,5 +29,5 @@ menu = [
 socials = [
   { name = "GitHub", url = "https://github.com/", icon = "github" },
   { name = "LinkedIn", url = "https://www.linkedin.com/", icon = "linkedin" },
-  { name = "Email", url = "mailto:hello@aaronkyriesenbach.com", icon = "email" },
+# { name = "Email", url = "mailto:hello@aaronkyriesenbach.com", icon = "email" },
 ]
