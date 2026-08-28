@@ -1,6 +1,6 @@
 base_url = "https://aaronkyriesenbach.com"
-title = "Aaron Kyriesenbach"
-description = "Personal site of Aaron Kyriesenbach — software engineer and musician."
+title = "Aaron Ky-Riesenbach"
+description = "Aaron Ky-Riesenbach"
 default_language = "en"
 
 compile_sass = false
@@ -16,9 +16,7 @@ smart_punctuation = true
 theme = "dracula"
 
 [extra]
-# Blog section stays out of the build via `draft = true` on content/blog/_index.md; flip both that and this to enable it.
 blog_enabled = false
-# Same pattern as blog_enabled: also remove `draft = true` from content/projects/_index.md to re-enable.
 projects_enabled = false
 
 menu = [

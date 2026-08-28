@@ -4,11 +4,13 @@ path = "music"
 template = "page.html"
 +++
 
-## Musical career
+Playing from age 5, Aaron grew up as a classically trained violinist, performing both solo and with ensembles regularly.
+He has competed and won awards in multiple competitions and has played with world-class orchestras through the Colburn School and American Youth Philharmonic Orchestras.
+He has an interest in chamber music and most recently has performed with quartets in the North Virginia and Boston areas.
+His favorite pieces to play are the Sibelius Violin Concerto and the Ravel String Quartet.
 
-A summary of your musical background goes here — instruments, genres,
-bands/projects, performances, recordings.
+More recently, Aaron has developed a passion for bluegrass music, throwing himself headfirst into Boston's excellent bluegrass community.
+He studies guitar with Alex Rubin and has particular interest in progressive styles.
+He plays regularly at community jams and can often be found pursuing new friends to play with.
 
-- Instruments and styles
-- Bands, ensembles, or collaborations
-- Recordings or performances worth linking to
+Aaron performs semi-regularly at events in the Boston area. Check back for more information.
