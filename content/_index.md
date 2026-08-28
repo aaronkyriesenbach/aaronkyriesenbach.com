@@ -1,5 +1,5 @@
 +++
-title = "Aaron Ky-Riesenbach"
+title = "Welcome"
 template = "index.html"
 +++
 
